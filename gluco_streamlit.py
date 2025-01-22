@@ -1,13 +1,12 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
 import joblib
 
 # Load the saved model and scalers
-poly_model = joblib.load('model_poly_reg.pkl')
-scaler_features = joblib.load('scaler_features.pkl')
-scaler_target = joblib.load('scaler_target.pkl')
-poly_reg = joblib.load('poly_reg.pkl')
+poly_model = joblib.load('model_poly_reg.pkl')  # Regression model
+scaler_features = joblib.load('scaler_features.pkl')  # Scaler for input features
+scaler_target = joblib.load('scaler_target.pkl')  # Scaler for target variable
+poly_reg = joblib.load('poly_reg.pkl')  # Polynomial feature generator
 
 # Define the feature names
 column_names = [
